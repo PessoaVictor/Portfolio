@@ -85,7 +85,7 @@ function animateCounter(element, target) {
 function initSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     const observerOptions = {
-        threshold: 0.7
+        threshold: 0.3
     };
     
     const observer = new IntersectionObserver((entries) => {
