@@ -52,11 +52,15 @@
                 </div>
             </div>
             
-            <form class="contact-form" data-aos="fade-left" data-aos-delay="400">
+            <form class="contact-form" action="https://formspree.io/f/xkgvevog" method="POST" data-aos="fade-left" data-aos-delay="400">
                 <div class="form-header">
                     <h3>Solicite um Orçamento</h3>
                     <p>Descreva seu projeto e receba uma proposta personalizada</p>
                 </div>
+                
+                <input type="hidden" name="_subject" value="Nova solicitação de orçamento - Portfolio">
+                <input type="hidden" name="_next" value="https://pessoavictor.github.io/Portfolio/#contact">
+                <input type="hidden" name="_captcha" value="false">
                 
                 <div class="form-row">
                     <div class="form-group">
@@ -113,7 +117,7 @@
                 
                 <div class="form-group checkbox-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" required>
+                        <input type="checkbox" name="aceita_contato" value="Sim, aceito receber contato por email e WhatsApp" required>
                         <span class="checkmark"></span>
                         Concordo em receber contato por email e WhatsApp
                     </label>

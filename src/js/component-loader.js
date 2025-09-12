@@ -69,7 +69,7 @@ class ComponentLoader {
             this.initializeLoadedComponents();
             
         } catch (error) {
-            console.error('❌ Error loading components:', error);
+            console.error('Error loading components:', error);
         }
     }
 
