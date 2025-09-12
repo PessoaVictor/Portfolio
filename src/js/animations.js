@@ -6,7 +6,7 @@ function initTypingEffect() {
         'Desenvolvedor Fullstack',
         'Arquiteto de Soluções',
         'Especialista em Cloud',
-        'Professor Universitário',
+        'Professor Senai-PE',
         'Consultor Microsoft'
     ];
     

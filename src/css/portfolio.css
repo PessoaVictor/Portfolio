@@ -29,10 +29,20 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
   transition: min-height 0.3s ease;
+  justify-content: center;
+}
+
+.portfolio-grid:has(.portfolio-item:nth-child(1):nth-last-child(1)) {
+  grid-template-columns: minmax(320px, 400px);
+  justify-content: center;
+}
+
+.portfolio-grid:has(.portfolio-item:nth-child(2):nth-last-child(1)) {
+  justify-content: center;
 }
 
 .portfolio-item {
@@ -44,6 +54,7 @@
   display: block;
   text-decoration: none;
   color: inherit;
+  width: 100%;
 }
 
 .portfolio-item:hover {
@@ -58,6 +69,7 @@
   overflow: hidden;
   height: 250px;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  flex-shrink: 0;
 }
 
 .portfolio-image img {
@@ -66,6 +78,7 @@
   object-fit: cover;
   object-position: center;
   transition: var(--transition);
+  display: block;
 }
 
 .portfolio-image img[src="assets/images/alpha.jpg"] {
@@ -100,6 +113,7 @@
   gap: var(--space-md);
   opacity: 0;
   transition: var(--transition);
+  z-index: 1;
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -311,4 +325,35 @@
   color: var(--text-secondary);
   line-height: 1.5;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+  
+  .portfolio-grid:has(.portfolio-item:nth-child(1):nth-last-child(1)) {
+    grid-template-columns: minmax(320px, 500px);
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    max-width: 1400px;
+    margin: var(--space-2xl) auto 0;
+  }
+  
+  .portfolio-grid:has(.portfolio-item:nth-child(1):nth-last-child(1)) {
+    grid-template-columns: minmax(320px, 500px);
+    justify-content: center;
+  }
+  
+  .portfolio-grid:has(.portfolio-item:nth-child(2):nth-last-child(1)) {
+    grid-template-columns: repeat(2, minmax(320px, 500px));
+    justify-content: center;
+  }
 }

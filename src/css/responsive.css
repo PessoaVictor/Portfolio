@@ -123,14 +123,6 @@
     grid-template-columns: 1fr;
   }
   
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .portfolio-info {
-    display: block;
-  }
-  
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
@@ -155,11 +147,6 @@
   
   .service-card {
     padding: var(--space-lg);
-  }
-  
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
   }
   
   .experience-meta {
