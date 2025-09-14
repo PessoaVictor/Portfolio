@@ -307,7 +307,7 @@
 }
 
 .portfolio-info {
-  display: none;
+  display: block;
   padding: var(--space-md);
   text-align: center;
   background: var(--card-bg);
@@ -336,6 +336,10 @@
   .portfolio-grid:has(.portfolio-item:nth-child(1):nth-last-child(1)) {
     grid-template-columns: minmax(320px, 500px);
     justify-content: center;
+  }
+  
+  .portfolio-info {
+    display: none;
   }
 }
 
