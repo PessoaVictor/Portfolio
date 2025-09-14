@@ -11,7 +11,7 @@
 .service-card {
   background: var(--card-bg);
   padding: var(--space-2xl);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-elegant);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   text-align: center;
@@ -30,7 +30,7 @@
   height: 70px;
   margin: 0 auto var(--space-lg);
   background: var(--gradient-primary);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-modern);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@
   text-align: center;
   padding: var(--space-md);
   background: var(--bg-secondary);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-asymmetric);
   margin-top: auto;
 }
 

@@ -12,7 +12,7 @@
 .testimonial-item {
   background: var(--card-bg);
   padding: var(--space-2xl);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-flowing);
   box-shadow: var(--shadow-sm);
   text-align: center;
   display: none;
@@ -53,7 +53,7 @@
 .testimonial-author img {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: var(--radius-modern);
   object-fit: cover;
   flex-shrink: 0;
 }

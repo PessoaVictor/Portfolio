@@ -47,7 +47,7 @@
 
 .portfolio-item {
   background: var(--card-bg);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-organic);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,7 +68,7 @@
   position: relative;
   overflow: hidden;
   height: 250px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-radius: var(--radius-flowing);
   flex-shrink: 0;
 }
 

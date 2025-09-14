@@ -125,25 +125,44 @@
 
 .image-bg {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  background: var(--gradient-primary);
-  border-radius: 50%;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.12) 0%, 
+    rgba(118, 75, 162, 0.1) 50%, 
+    rgba(240, 147, 251, 0.06) 100%);
+  border-radius: 2rem;
   z-index: 0;
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite, pulse 4s ease-in-out infinite;
+  filter: blur(1.5px);
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--white);
-  box-shadow: var(--shadow-xl);
+  border-radius: 1.5rem;
+  border: 3px solid var(--white);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.08),
+    0 8px 20px rgba(102, 126, 234, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
   position: relative;
   z-index: 1;
+  filter: contrast(1.01) brightness(1.005);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-container:hover img {
+  transform: translateY(-6px) scale(1.02);
+  border-radius: 1.8rem;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(102, 126, 234, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+  filter: contrast(1.03) brightness(1.02);
 }
 
 [data-theme="dark"] .image-container img {
@@ -162,7 +181,7 @@
   position: absolute;
   background: var(--card-bg);
   border: 2px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-modern);
   width: 50px;
   height: 50px;
   display: flex;
